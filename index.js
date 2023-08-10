@@ -1,47 +1,41 @@
-arr = [`barbe`, `can`];
-len = arr.length;
-//userQuestion = prompt(`Enter the length of array?`)
-//while (userQuestion === null || userQuestion.replaceAll(` `, ``) === ``) {
-// userQuestion = prompt(`Enter the length of array again?`)
-// console.log(len)
-//}
+myArr = new Array(10); // []
+console.log(myArr);
 
-min = 2;
-max = 10;
+myArr = prompt(`how length this array?`)
 
-console.log(arr)
-console.log(arr.length)
-console.log(arr[1])
-console.log(arr[100])
-arr[100] = 'sindi'
-console.log(arr[100])
-console.log(arr)
+while (myArr.length <= [2] || myArr.length >= [10] || myArr.length === null) {
+    myArr = prompt(`how length this array again, pls`)
 
-arr[0] = 'svitlana'
-console.log(arr)
-
-arr.length = 5;
-console.log(arr)
-arr[arr.length] = 'roma'
-console.log(arr)
-arr.length = arr.length + 1;
-console.log(arr)
-
-arr.push('tiger')
-console.log(arr)
-
-arr.unshift('swift', 'cat', 'dog')
-console.log(arr)
-
-arr.shift()
-console.log(arr)
-
-arr.pop()
-console.log(arr)
-arrNew = arr.join(';')
-console.log(arrNew)
+}
+prompt(`length this array is ${myArr.length}`)
+console.log(myArr.length)
 
 
-arr = ['barby', 'can', 'habr']
-arr.reverse()
-console.log(arr)
+maxRandom = 10;
+minRandom = -10;
+
+for (i = 0; i < myArr.length; i++) {
+    myArr[i] = Math.floor(Math.random() * (maxRandom - minRandom + 1)) + minRandom;
+    console.log(myArr[i])
+}
+
+for (i = 1, min = max = myArr[0]; i < myArr.length; i++) {
+    currentElement = myArr[i];
+
+    if (currentElement < min) {
+        min = currentElement;
+    }
+
+    if (currentElement > max) {
+        max = currentElement;
+    }
+}
+
+for (i = 0, sum = 0; i < myArr.length; i++) {
+    sum += myArr[i];
+}
+
+console.log(myArr);
+console.log(`Min element is ${min}`);
+console.log(`Max element is ${max}`);
+console.log(`Sum of arr elements is ${sum}`)
