@@ -4,10 +4,10 @@ console.log(myArr);
 myArr = prompt(`how length this array?`)
 
 while (myArr.length <= [2] || myArr.length >= [10] || myArr.length === null) {
-    myArr = prompt(`how length this array again, pls`)
+    myArr = (prompt(`how length this array again, pls`))
 
 }
-prompt(`length this array is ${myArr.length}`)
+myArr.length = Math.abs(prompt(`length this array is ${myArr.length}`))
 console.log(myArr.length)
 
 
